@@ -1,0 +1,16 @@
+#summary How to install Subclipse: a plugin for SVN
+
+= Subclipseのインストール =
+
+サンプルをダウンロードするには、Eclipseにsubversionのプラグインを導入する必要があります。ここでは、
+http://subclipse.tigris.org/ のSubclipseを用います。
+
+== プラグインの導入 ==
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+
+
+== 設定 ==
