@@ -21,7 +21,7 @@ App Engineの利用を制御するには、プロジェクトの上で右クリ�
 
 次に同じ手順で再度パネルを開き、[Use Google App Engine]チェックボックスを、今度はチェックしてパネルを閉じます。これでjarが配備されたはずです。プロジェクト/war/lib 以下を開いて確認してみてください。
 
-http://sb-gaebook-samples.googlecode.com/files/Screen%20shot%202010-06-12%20at%206.52.59%20PM.png
+http://sb-gaebook-samples.googlecode.com/files/Screen%20shot%202010-06-12%20at%206.52.59%20PM-mod.png
 
 
 == 注意 ==
@@ -29,4 +29,4 @@ http://sb-gaebook-samples.googlecode.com/files/Screen%20shot%202010-06-12%20at%2
 
 [ウィンドウ]→[設定]でパネルを開き、[一般]→[ワークスペース]の[テキスト・ファイル・エンコード]をUTF-8にしてください。
 
-http://sb-gaebook-samples.googlecode.com/files/Screen%20shot%202010-06-13%20at%201.24.50%20AM.png
+http://sb-gaebook-samples.googlecode.com/files/Screen%20shot%202010-06-13%20at%201.24.50%20AM-mod.png
