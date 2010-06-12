@@ -4,6 +4,23 @@ Subclipseを用いたコードのチェックアウト方法を説明します�
 == 事前準備 ==
 事前に、App Engineのプラグインを入れておいてください。App Engineプラグインの導入に関しては本書の付録をご覧ください。
 
+== レポジトリの登録 ==
+まず、このサイトのレポジトリをsubclipseに登録します。
+
+[ウィンドウ][パースペクティブを開く][その他] [SVNリポジトリエクスプローラ]
+からSVNレポジトリエクスプローラを開きます。左側のSVNレポジトリパネルで右クリック、[新規]→[レポジトリー・ロケーション]とします。
+
+http://sb-gaebook-samples.googlecode.com/files/Screen%20shot%202010-06-12%20at%205.22.00%20PM.png
+
+すると下のパネルが開きます。ここに本サイトのレポジトリURLである
+
+  http://sb-gaebook-samples.googlecode.com/svn/trunk
+
+を登録します。
+
+http://sb-gaebook-samples.googlecode.com/files/Screen%20shot%202010-06-12%20at%205.23.35%20PM.png
+
+
 == チェックアウト ==
 
 Add your content here.  Format your content with:
