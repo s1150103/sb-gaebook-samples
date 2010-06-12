@@ -1,0 +1,21 @@
+= コードのチェックアウト =
+Subclipseを用いたコードのチェックアウト方法を説明します。チェックアウト自体は普通なのですが、その後App Engineのプロジェクトとして利用するためには、ちょっとした後処理が必要です。
+
+== 事前準備 ==
+事前に、App Engineのプラグインを入れておいてください。App Engineプラグインの導入に関しては本書の付録をご覧ください。
+
+== チェックアウト ==
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+
+
+== 後処理 ==
+チェックアウトした状態ではApp Engineプロジェクトとして正常に動きません。これは、svnにはApp Engineに必要なjarが含まれていないからです。これを加えるには、一度App Engineの使用
+
+== 注意 ==
+チェックアウトした際にコード内のコメントが文字化けしている場合は、ワークスペースの文字コードの設定がUTF-8になっているかを確認してみてください。
+
+[ウィンドウ]→[設定]でパネルを開き、[一般]→[ワークスペース]の[テキスト・ファイル・エンコード]をUTF-8にしてください。
