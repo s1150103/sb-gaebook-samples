@@ -21,9 +21,7 @@ App Engineの利用を制御するには、プロジェクトの上で右クリ�
 
 次に同じ手順で再度パネルを開き、[Use Google App Engine]チェックボックスを、今度はチェックしてパネルを閉じます。これでjarが配備されたはずです。プロジェクト/war/lib 以下を開いて確認してみてください。
 
-
-
-
+http://sb-gaebook-samples.googlecode.com/files/Screen%20shot%202010-06-12%20at%206.52.59%20PM.png
 
 
 == 注意 ==
