@@ -19,3 +19,5 @@ Add your content here.  Format your content with:
 チェックアウトした際にコード内のコメントが文字化けしている場合は、ワークスペースの文字コードの設定がUTF-8になっているかを確認してみてください。
 
 [ウィンドウ]→[設定]でパネルを開き、[一般]→[ワークスペース]の[テキスト・ファイル・エンコード]をUTF-8にしてください。
+
+http://code.google.com/p/sb-gaebook-samples/downloads/detail?name=Screen%20shot%202010-06-13%20at%201.24.50%20AM.png
