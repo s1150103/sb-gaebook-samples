@@ -12,5 +12,22 @@ Add your content here.  Format your content with:
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
 
+http://sb-gaebook-samples.googlecode.com/files/Untitled.png
+
+http://sb-gaebook-samples.googlecode.com/files/Untitled%202.png
+
+http://sb-gaebook-samples.googlecode.com/files/Untitled%203.png
+
+http://sb-gaebook-samples.googlecode.com/files/Untitled%204.png
+
+http://sb-gaebook-samples.googlecode.com/files/Untitled%205.png
+
+http://sb-gaebook-samples.googlecode.com/files/Untitled%206.png
+
+http://sb-gaebook-samples.googlecode.com/files/Untitled%207.png
+
+http://sb-gaebook-samples.googlecode.com/files/Untitled%208.png
+
+http://sb-gaebook-samples.googlecode.com/files/Untitled%209.png
 
 == 設定 ==
