@@ -1,0 +1,10 @@
+<html>
+<body>
+  <span style="font-size: 200%">OpenID login</span>
+  <form action="/openIDLoginHandler" method="post">
+    <input type="hidden" name="continue" value="$continue" />
+    <input type="text" name="openid_identifier" size="50" />
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+</html> 
