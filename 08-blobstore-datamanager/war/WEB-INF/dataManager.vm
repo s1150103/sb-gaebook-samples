@@ -1,0 +1,30 @@
+<html>
+<body>
+  <span style="font-size: 200%"> Uploaded Blobs </span>
+  <table rules="all" cellpadding="5">
+    <tr align="center" bgcolor="lightgray">
+    <th width="200"> ファイル名 </th>
+    <th width="140"> Content Type </th>
+    <th width="80"> サイズ </th>
+    <th width="200"> アップロード時刻 </th>
+    <th> </th>
+  </tr>
+  #foreach ($blob in $blobs)
+    <tr align="right">
+      <td> <a href="/fileServer?blob-key=$blob.getBlobKey().getKeyString()"> $blob.filename </a></td>
+      <td> $blob.contentType </td>
+      <td> $blob.size </td>
+      <td> $_datetimeFormat.format($blob.creation) </td>
+      <td> <a href="/fileServer?blob-key=$blob.getBlobKey().getKeyString()&delete=true">DEL</a> </td>
+    </tr>
+  #end
+  </table>
+
+  <hr/>
+  <form action="$uploadUrl" method="post" enctype="multipart/form-data">
+     <input type="file" name="myFile">
+     <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
+
