@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app>
+  <servlet>
+    <servlet-name>imageMailhandler</servlet-name>
+    <servlet-class>gaebook.mailImage.ImageMailHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>imageMailhandler</servlet-name>
+    <url-pattern>/_ah/mail/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ImageDisplay</servlet-name>
+    <servlet-class>gaebook.util.ImageDisplay</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ImageDisplay</servlet-name>
+    <url-pattern>/imagedisplay</url-pattern>
+  </servlet-mapping>
+
+  <security-constraint>
+    <web-resource-collection>
+      <url-pattern>/_ah/mail/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+</web-app>
