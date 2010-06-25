@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <servlet>
+    <servlet-name>lowMail</servlet-name>
+    <servlet-class>gaebook.mail.LowMail</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>lowMailAttach</servlet-name>
+    <servlet-class>gaebook.mail.LowMailAttach</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>javaMail</servlet-name>
+    <servlet-class>gaebook.mail.JavaMail</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>javaMailAttach</servlet-name>
+    <servlet-class>gaebook.mail.JavaMailAttach</servlet-class>
+  </servlet>
+  
+	<servlet-mapping>
+    <servlet-name>lowMail</servlet-name>
+    <url-pattern>/lowMail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>lowMail</servlet-name>
+    <url-pattern>/lowMailAttach</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>javaMail</servlet-name>
+    <url-pattern>/javaMail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>javaMailAttach</servlet-name>
+    <url-pattern>/javaMailAttach</url-pattern>
+  </servlet-mapping>
+
+ 
+  <welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+ <!-- ログインを強制 -->
+  <security-constraint>
+    <web-resource-collection>
+      <url-pattern>/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>*</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <security-constraint>
+    <web-resource-collection>
+      <url-pattern>/_ah/mail/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+
+
+</web-app>
