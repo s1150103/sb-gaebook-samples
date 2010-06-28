@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app>
+	<servlet>
+		<servlet-name>HTMLParsing</servlet-name>
+		<servlet-class>gaebook.htmlParse.HTMLParsing</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HTMLParsing</servlet-name>
+		<url-pattern>/htmlparsing</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
