@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app>
+  <servlet>
+    <servlet-name>imageUpload</servlet-name>
+    <servlet-class>gaebook.util.ImageUpload</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>imageUpload</servlet-name>
+    <url-pattern>/imageUpload</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>imageDisplay</servlet-name>
+    <servlet-class>gaebook.util.ImageDisplay</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>imageDisplay</servlet-name>
+    <url-pattern>/imageDisplay</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>dataManager</servlet-name>
+    <servlet-class>gaebook.imageTransform.DataManager</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>dataManager</servlet-name>
+    <url-pattern>/dataManager</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>imageTransformPanel</servlet-name>
+    <servlet-class>gaebook.imageTransform.ImageTransformPanel</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>imageTransformPanel</servlet-name>
+    <url-pattern>/imageTransformPanel</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>transformEngine</servlet-name>
+    <servlet-class>gaebook.imageTransform.TransformEngine</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>transformEngine</servlet-name>
+    <url-pattern>/transformEngine</url-pattern>
+  </servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>dataManager</welcome-file>
+	</welcome-file-list>
+</web-app>
