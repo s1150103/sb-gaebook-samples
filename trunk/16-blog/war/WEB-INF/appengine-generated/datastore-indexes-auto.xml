@@ -1,0 +1,20 @@
+<!-- Indices written at Sat, 6 Feb 2010 01:59:51 UTC -->
+
+<datastore-indexes>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="BlogEntry" ancestor="true" source="auto">
+        <property name="entries_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+
+    <!-- Used 6 times in query history -->
+    <datastore-index kind="ImageEntity" ancestor="true" source="auto">
+        <property name="images_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="BlogEntry" ancestor="true" source="auto">
+        <property name="date" direction="desc"/>
+    </datastore-index>
+
+</datastore-indexes>

@@ -1,0 +1,84 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="/blog.css" media="all" type="text/css">
+  <!-- 設定パネル開閉スクリプト -->
+  <script><!--
+    function toggle_disp(itemId) {
+       var disp = document.all(itemId).style.display;
+       if(disp == "block") {
+           disp = "none";
+      } else {
+           disp = "block";
+      }
+      document.all(itemId).style.display = disp;
+   }
+   --></script>
+  <title> Yet Another BLOG System </title>
+</head>
+<body>
+  <div id="panel">
+    <div id="header">
+      <span style="font-size: 200%"> Yet Another BLOG System</span>
+      <span class="right">
+        #if ($user)
+          <span> $user </span>
+          <span> <a href="$signOutUrl">logout</a> </span>
+        #else
+          <span> <a href="$signInUrl">login</a> </span>
+        #end
+      </span>
+    </div>
+
+    #if ($user)
+      <div><a href="/createBlog.html">新しいブログを作る</a> </div>
+    #end
+    <div class="blogList">
+    #foreach ($blog in $blogs)
+      <div class="blog">
+        <span class="name"> <a href="/blogs/$blog.key"> $blog.key </a> </span>
+        #if ($user)
+          <span class="right">
+            <span class="note"> 
+              <a href="/createBlogEntry?blogName=$blog.key">エントリを書く</a> 
+            </span>
+            <span class="note"> 
+              <a href="javascript:toggle_disp('$blog.key')">設定</a> 
+            </span>
+            <span class="note"> 
+              <a href="/confirmationDialog?accept=/deleteBlogHandler&cancel=/home&message=ブログを削除します．よろしいですか？&blogName=$blog.key">ブログを削除</a> 
+            </span>
+          </span>
+          <div class="config" id="$blog.key" style="display: none;">
+            <form action="/configBlogHandler" method="POST"> 
+              <ul>
+                <li> 1ページあたりのエントリ数： 
+                  <input type="hidden" name="blogName" value="$blog.key"/>
+                  <input type="text" name="perPage" value="$blog.perPage" size="2"/>
+                </li>
+                <li> メイルによる投稿を有効にする：
+                  <input type="checkbox" name="useMail" value="on" 
+                  #if ($blog.useMail) checked="checked"  #end />
+                </li>
+                <li>
+                  <ul>
+                    <li> 使用メイルアドレス：<br/> 
+                      $mailPrefix .
+                      <input type="text" name="mailPostFix" 
+                             value="$blog.mailPostFix" size="10"/> 
+                      @ $mailDomain </br>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <input type="submit" value="変更">
+            </form>
+          </div> <!-- config -->
+        #end
+      </div> <!-- blog -->
+    #end
+    </div> <!-- blogList -->
+  </div> <!-- panel -->
+</body>
+</html>
+
