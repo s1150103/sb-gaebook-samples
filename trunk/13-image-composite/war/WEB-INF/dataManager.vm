@@ -1,0 +1,28 @@
+<html>
+<body>
+  <span style="font-size: 200%"> stored images </span>
+  <table rules="all" cellpadding="5">
+    <tr align="center" bgcolor="lightgray">
+    <th width="200"> ファイル名 </th>
+    <th width="140"> Content Type </th>
+    <th width="80"> サイズ </th>
+      <th width="30">  </th>
+  </tr>
+  #foreach ($image in $images)
+    <tr align="right">
+      <td> <a href="/imageDisplay?imageId=$image.getId()"> $image.getName() </a></td>
+      <td> $image.getContentType() </td>
+      <td> $image.getBytes().size() </td>
+      <td> <a href="/imageDisplay?imageId=$image.getId()&delete=true"> del </a> </td>
+    </tr>
+  #end
+  </table>
+
+  <hr/>
+  <form action="/imageUpload" method="post" enctype="multipart/form-data">
+     <input type="file" name="upfile">
+     <input type="submit" value="Upload">
+  </form>
+</body>
+</html>
+
