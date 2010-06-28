@@ -1,0 +1,30 @@
+<html>
+<body>
+  <span style="font-size: 200%"> ImageTransform </span>
+  <div>
+  <img src="/imageDisplay?imageId=$imageId"/>
+  </div>
+  <hr/>
+
+  <form method="post" action="/transformEngine">
+  Transform<br/>
+  <input type="hidden" name="redirect_to" value="$redirect_to"/>
+  <input type="hidden" name="imageId" value="$imageId"/>
+#set ($numbers=[1..5]) 
+#foreach ($num in $numbers)  
+  <input type="radio" name="t$num" value="rotate-90"/> 右回転
+  <input type="radio" name="t$num" value="rotate-180"/> 180度回転
+  <input type="radio" name="t$num" value="rotate-270"> 左回転
+  <input type="radio" name="t$num" value="flip-ud"> 上下反転
+  <input type="radio" name="t$num" value="flip-lr"> 左右反転
+  <input type="radio" name="t$num" value="lucky"> Lucky
+  <input type="radio" name="t$num" value="resize"> リサイズ 
+  <input type="radio" name="t$num" value="crop"> クロップ
+  <input type="text"  name="t${num}-text" value=""> 
+<hr>
+#end
+  <input type="submit" value="transform!"></p>
+  </form>
+</body>
+</html>
+
