@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app>
+  <servlet>
+    <servlet-name>xmpp2Twitter</servlet-name>
+    <servlet-class>gaebook.xmpp.XMPP2Twitter</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>xmpp2Twitter</servlet-name>    
+    <url-pattern>/_ah/xmpp/message/chat/</url-pattern>
+  </servlet-mapping>
+</web-app>
