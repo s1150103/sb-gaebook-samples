@@ -10,3 +10,5 @@ private static void initializeVelocity() throws Exception {
     initialized = true;
 }
 }}}
+
+なお、Blogアプリなどのソースツリー上のRederer.javaはこのプロパティを含んでいますので、そのままお使いいただけます。
