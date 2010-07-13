@@ -1,6 +1,6 @@
 = Velocityによる日本語テンプレートのレンダリング =
 
-Appendix Gに示したRedererでは、テンプレート内で日本語を用いると文字化けします。これは、テンプレートの文字コードが指定されていないためです。下記のようにinitializeVelocityメソッド内でINPUT_ENCODINGプロパティを設定してください。
+Appendix Gに示したRedererでは、テンプレート内で日本語を用いると文字化けします。これは、テンプレートの文字コードが指定されていないためです。下記のように Renderer#initializeVelocityメソッド内でINPUT_ENCODINGプロパティを設定してください。
 
 {{{
 private static void initializeVelocity() throws Exception {
