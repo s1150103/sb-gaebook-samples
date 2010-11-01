@@ -1,6 +1,8 @@
 package gaebook.util;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+
 import java.util.logging.*;
 import javax.jdo.PersistenceManager;
 import javax.servlet.*;
@@ -24,8 +26,11 @@ public class DeferredHandler extends HttpServlet {
                 entity = DeferredEntity.readEntity(req);   
             try {
                 entity.execute();
-            } catch (Deferred.PermanentTaskFailure e) {
-                logger.log(Level.WARNING, "got PermananentException", e);
+            } catch (InvocationTargetException e) {
+                if (e.getTargetException() instanceof Deferred.PermanentTaskFailure)
+                    logger.log(Level.WARNING, "got PermananentException", e);
+                else 
+                    throw new IOException(e);
             }
             if (idStr != null)
                 pm.deletePersistent(entity);
