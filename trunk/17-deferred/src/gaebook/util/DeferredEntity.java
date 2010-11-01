@@ -74,15 +74,13 @@ public class DeferredEntity implements Serializable {
         }
     }
     
-    public void execute() throws IOException {
+    public void execute() throws IOException, InvocationTargetException{
         try {
             getMethod().invoke(null, getParams().toArray());
         } catch (IllegalArgumentException e) {
             throw new IOException(e);
         } catch (IllegalAccessException e) {
             throw new IOException(e);
-        } catch (InvocationTargetException e) {
-            throw new IOException(e.getCause());
         }
     }
 
