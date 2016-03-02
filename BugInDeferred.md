@@ -1,0 +1,10 @@
+# 17章のDeferredにバグ #
+
+読者のかたにご指摘いただきました。Deferred のPermanentFailureException が意図通りに動いていませんでした。この例外が生じた場合、DeferredHandler内のtry-catchで処理しているつもりだったのですが、
+
+  * invoke先での例外はInvocationTargetExceptionでラップされる
+  * DeferredEntity のなかでInvocationTargetExceptionをIOExceptionでラップしていた
+
+というミスにより意図通りに動いていませんでした。
+
+修正したバージョンをコミットしてありますのでご覧ください。
